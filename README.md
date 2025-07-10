@@ -261,6 +261,17 @@
       `;
       table.appendChild(row);
     });
-
+<!-- PUBLIC THOUGHT SUBMISSION FORM -->
+<section style="padding:40px;text-align:center;">
+  <h2>💡 Share Your Own Motivational Thought</h2>
+  <form onsubmit="submitThought(event)" style="max-width:500px;margin:auto;">
+    <textarea id="userThought" placeholder="Write your thought..." required rows="3" style="width:100%;padding:10px;border-radius:8px;"></textarea>
+    <br><br>
+    <input type="text" id="userName" placeholder="Your Name (optional)" style="width:100%;padding:8px;border-radius:8px;">
+    <br><br>
+    <button type="submit" style="padding:10px 30px;border:none;border-radius:20px;background:#00b894;color:white;">Submit</button>
+  </form>
+  <p id="thoughtSubmitMsg" style="color:green;display:none;margin-top:10px;">✅ Your thought is live now!</p>
+</section>
 
 
