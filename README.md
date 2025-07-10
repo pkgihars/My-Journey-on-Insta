@@ -215,4 +215,47 @@
   <h2>Our Instagram – <a href="https://www.instagram.com/avocardlo" target="_blank">@avocardlo</a></h2>
   <iframe src="https://www.instagram.com/p/CwMTlZ-Bbq3/embed" width="400" height="480" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 </section>
+<!-- CONTRIBUTOR LEADERBOARD -->
+<section style="padding:60px 20px;text-align:center;background:#fdfdfd;">
+  <h2 style="font-weight:bold;">🏆 Top Contributors</h2>
+  <p>These awesome people have submitted the most quotes!</p>
+  <div style="max-width:500px;margin:auto;">
+    <table style="width:100%;margin-top:20px;border-collapse:collapse;">
+      <thead style="background:#f0f0f0;">
+        <tr>
+          <th style="padding:10px;border-bottom:2px solid #ccc;">Rank</th>
+          <th style="padding:10px;border-bottom:2px solid #ccc;">Name</th>
+          <th style="padding:10px;border-bottom:2px solid #ccc;">Quotes</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardTable">
+        <!-- Rows are added via JS -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<script>
+  // Simulated contributors (you can edit or replace with dynamic data later)
+  const contributors = [
+    { name: "Ravi Singh", quotes: 28 },
+    { name: "Alisha Mehra", quotes: 24 },
+    { name: "Dev Kumar", quotes: 20 },
+    { name: "Sneha Roy", quotes: 15 },
+    { name: "Avocardlo", quotes: 12 }
+  ];
+
+  const table = document.getElementById("leaderboardTable");
+  contributors
+    .sort((a, b) => b.quotes - a.quotes)
+    .forEach((person, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td style="padding:10px;border-bottom:1px solid #eee;">${index + 1}</td>
+        <td style="padding:10px;border-bottom:1px solid #eee;">${person.name}</td>
+        <td style="padding:10px;border-bottom:1px solid #eee;">${person.quotes}</td>
+      `;
+      table.appendChild(row);
+    });
+</script>
 
