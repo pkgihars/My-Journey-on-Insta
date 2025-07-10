@@ -13,7 +13,6 @@
     <input type="text" id="visitorName" placeholder="Your Name" style="padding:10px;width:250px;border-radius:8px;border:1px solid #ccc;">
     <br><br>
     <button onclick="enterSite()" style="padding:10px 30px;border:none;border-radius:8px;background:#00b894;color:white;font-weight:bold;">Enter Site</button>
-
   <!-- 🧠 Main Site Content -->
   <div id="mainContent" style="display:none;padding:40px;">
     <div id="greetingBanner" style="text-align:center;font-size:1.5em;margin-bottom:30px;"></div>
