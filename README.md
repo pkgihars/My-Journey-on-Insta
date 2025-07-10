@@ -6,6 +6,8 @@
   <title>Avocardlo - Motivational Quotes</title>
 </head>
 <body style="margin:0;font-family:sans-serif;">
+</body>
+</html>
 
   <!-- 👋 Welcome Overlay (Name Entry) -->
   <div id="welcomeOverlay" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;">
