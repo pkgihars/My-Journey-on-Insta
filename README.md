@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -14,7 +14,6 @@
     <input type="text" id="visitorName" placeholder="Your Name" style="padding:10px;width:250px;border-radius:8px;border:1px solid #ccc;">
     <br><br>
     <button onclick="enterSite()" style="padding:10px 30px;border:none;border-radius:8px;background:#00b894;color:white;font-weight:bold;">Enter Site</button>
-  </div>
 
   <!-- 🧠 Main Site Content -->
   <div id="mainContent" style="display:none;padding:40px;">
@@ -56,7 +55,7 @@
 <section style="padding:40px 20px;text-align:center;">
   <h2>Search Motivational Quotes</h2>
   <input type="text" id="quoteSearch" onkeyup="filterQuotes()" placeholder="Type keywords..." style="width:300px;padding:10px;border-radius:5px;border:1px solid #ccc;">
-</section><!DOCTYPE html>
+</section>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
