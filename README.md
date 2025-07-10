@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<!-- SEARCH BAR -->
+<section style="padding:40px 20px;text-align:center;">
+  <h2>Search Motivational Quotes</h2>
+  <input type="text" id="quoteSearch" onkeyup="filterQuotes()" placeholder="Type keywords..." style="width:300px;padding:10px;border-radius:5px;border:1px solid #ccc;">
+</section><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -257,44 +261,6 @@
       `;
       table.appendChild(row);
     });
-</script>
-<!-- SEARCH BAR -->
-<section style="padding:40px 20px;text-align:center;">
-  <h2>Search Motivational Quotes</h2>
-  <input type="text" id="quoteSearch" onkeyup="filterQuotes()" placeholder="Type keywords..." style="width:300px;padding:10px;border-radius:5px;border:1px solid #ccc;">
-</section>
-<!-- CATEGORY FILTER -->
-<section style="text-align:center;padding:20px;">
-  <h3>Filter by Category</h3>
-  <button onclick="filterByTag('all')" class="tag-btn">All</button>
-  <button onclick="filterByTag('discipline')" class="tag-btn">Discipline</button>
-  <button onclick="filterByTag('focus')" class="tag-btn">Focus</button>
-  <button onclick="filterByTag('confidence')" class="tag-btn">Confidence</button>
-  <button onclick="filterByTag('success')" class="tag-btn">Success</button>
-</section>
 
-<style>
-  .tag-btn {
-    margin: 5px;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 30px;
-    background: #007bff;
-    color: white;
-    cursor: pointer;
-  }
-  .tag-btn:hover {
-    background: #0056b3;
-  }
-</style>
-<script>
-function filterByTag(tag) {
-  const cards = document.querySelectorAll(".quote-card");
-  cards.forEach(card => {
-    const type = card.getAttribute("data-tag");
-    card.style.display = (tag === "all" || type === tag) ? "block" : "none";
-  });
-}
-</script>
 
 
