@@ -1,10 +1,57 @@
-<!-- NAME ENTRY SCREEN -->
-<div id="welcomeOverlay" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;">
-  <h1 style="font-size:2em;margin-bottom:20px;">Welcome to Avocardlo</h1>
-  <p style="margin-bottom:10px;">Enter your name to continue:</p>
-  <input type="text" id="visitorName" placeholder="Your Name" style="padding:10px;width:250px;border-radius:8px;border:1px solid #ccc;">
-  <br><br>
-  <button onclick="enterSite()" style="padding:10px 30px;border:none;border-radius:8px;background:#00b894;color:white;font-weight:bold;">Enter Site</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avocardlo - Motivational Quotes</title>
+</head>
+<body style="margin:0;font-family:sans-serif;">
+
+  <!-- 👋 Welcome Overlay (Name Entry) -->
+  <div id="welcomeOverlay" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;">
+    <h1 style="font-size:2em;margin-bottom:20px;">Welcome to <span style="color:#00b894;">Avocardlo</span></h1>
+    <p style="margin-bottom:10px;">Enter your name to continue:</p>
+    <input type="text" id="visitorName" placeholder="Your Name" style="padding:10px;width:250px;border-radius:8px;border:1px solid #ccc;">
+    <br><br>
+    <button onclick="enterSite()" style="padding:10px 30px;border:none;border-radius:8px;background:#00b894;color:white;font-weight:bold;">Enter Site</button>
+  </div>
+
+  <!-- 🧠 Main Site Content -->
+  <div id="mainContent" style="display:none;padding:40px;">
+    <div id="greetingBanner" style="text-align:center;font-size:1.5em;margin-bottom:30px;"></div>
+    <h2 style="text-align:center;">✨ Motivational Quote of the Day</h2>
+    <p style="text-align:center;font-style:italic;">"Push yourself, because no one else is going to do it for you."</p>
+  </div>
+
+  <!-- ✅ JavaScript -->
+  <script>
+    // Check for stored name on load
+    window.onload = function () {
+      const name = localStorage.getItem("visitorName");
+      if (name) {
+        showMainSite(name);
+      }
+    };
+
+    function enterSite() {
+      const name = document.getElementById("visitorName").value.trim();
+      if (!name) {
+        alert("Please enter your name.");
+        return;
+      }
+      localStorage.setItem("visitorName", name);
+      showMainSite(name);
+    }
+
+    function showMainSite(name) {
+      document.getElementById("welcomeOverlay").style.display = "none";
+      document.getElementById("mainContent").style.display = "block";
+      document.getElementById("greetingBanner").innerHTML = `👋 Welcome, <strong>${name}</strong>! Stay motivated.`;
+    }
+  </script>
+
+</body>
+</html>
 </div><!-- SEARCH BAR -->
 <section style="padding:40px 20px;text-align:center;">
   <h2>Search Motivational Quotes</h2>
