@@ -169,3 +169,50 @@
 
 </body>
 </html>
+<!-- DARK MODE TOGGLE -->
+<button onclick="toggleDarkMode()" style="position:fixed;top:20px;right:20px;padding:8px 12px;border:none;border-radius:5px;background:#333;color:white;z-index:999;">
+  🌓 Dark Mode
+</button>
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
+<style>
+  .dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  .dark-mode .thought {
+    background: #1e1e1e;
+    color: #ddd;
+  }
+</style>
+<!-- QUOTE SUBMISSION FORM -->
+<section style="padding:40px;text-align:center;">
+  <h2>Submit Your Own Quote</h2>
+  <form onsubmit="handleQuoteSubmit(event)" style="max-width:500px;margin:auto;">
+    <textarea id="quoteInput" placeholder="Write your motivational quote..." required rows="4" style="width:100%;padding:10px;border-radius:10px;"></textarea>
+    <br><br>
+    <input type="text" id="quoteAuthor" placeholder="Your Name (optional)" style="width:100%;padding:8px;border-radius:10px;">
+    <br><br>
+    <button type="submit" style="padding:10px 30px;border:none;border-radius:30px;background:#00b894;color:white;">Submit</button>
+  </form>
+  <div id="thankYouMsg" style="margin-top:20px;color:green;display:none;">Thanks! Your quote was submitted.</div>
+</section>
+
+<script>
+  function handleQuoteSubmit(e) {
+    e.preventDefault();
+    document.getElementById("thankYouMsg").style.display = "block";
+    // You can later connect this to Firebase, Airtable, or save to backend
+    document.getElementById("quoteInput").value = '';
+    document.getElementById("quoteAuthor").value = '';
+  }
+</script>
+<!-- INSTAGRAM EMBED SECTION -->
+<section style="padding:60px 20px;text-align:center;background:#fff;">
+  <h2>Our Instagram – <a href="https://www.instagram.com/avocardlo" target="_blank">@avocardlo</a></h2>
+  <iframe src="https://www.instagram.com/p/CwMTlZ-Bbq3/embed" width="400" height="480" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+</section>
+
